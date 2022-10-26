@@ -1,6 +1,7 @@
 package com.nestdigital.todo_backend.controller;
 
 import com.nestdigital.todo_backend.dao.UserDao;
+import com.nestdigital.todo_backend.model.PostModel;
 import com.nestdigital.todo_backend.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class UserController {
@@ -30,4 +32,7 @@ public class UserController {
     {
         return (List<UserModel>) dao.SignUp(user.getEmail(),user.getPassword());
     }
+
+
+
 }
